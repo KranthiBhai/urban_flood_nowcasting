@@ -1,16 +1,122 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin Dashboard | FloodNow AI</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="topbar"><span>Smart India Hackathon • SIH26085</span><span data-clock></span></div>
-<nav class="navbar"><a class="brand" href="index.html"><span class="brand-mark">🌧</span><span>FloodNow AI</span></a>
-<div class="navlinks">
-<a class="" href="dashboard.html">Dashboard</a>
-<a class="" href="map.html">Flood Map</a>
-<a class="" href="analytics.html">Analytics</a>
-<a class="" href="alerts.html">Alerts</a>
-<a class="active" href="admin.html">Admin</a>
-<a class="btn" href="emergency.html">Emergency</a></div></nav>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Admin Dashboard | FloodNow AI</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="topbar">
+			<span>Smart India Hackathon • SIH26085</span
+			><span data-clock></span>
+		</div>
+		<nav class="navbar">
+			<a class="brand" href="index.html"
+				><span class="brand-mark">🌧</span><span>FloodNow AI</span></a
+			><button
+				class="menu-button"
+				data-menu
+				aria-label="Open navigation"
+				aria-expanded="false"
+			>
+				☰
+			</button>
+			<div class="navlinks">
+				<a class="" href="dashboard.html">Dashboard</a>
+				<a class="" href="map.html">Flood Map</a>
+				<a class="" href="analytics.html">Analytics</a>
+				<a class="" href="alerts.html">Alerts</a
+				><a class="" href="history.html">History</a>
+				<a class="active" href="admin.html">Admin</a>
+				<a class="btn" href="emergency.html">Emergency</a>
+			</div>
+		</nav>
 
-<div class="page-head"><div class="container"><h1>Municipal Authority Dashboard</h1><p>Operational controls for flood monitoring and response.</p></div></div>
-<main class="container section"><div class="stats"><div class="stat"><span class="muted">Rainfall stations</span><div class="value">24</div><span class="badge low">Online 23</span></div><div class="stat"><span class="muted">Drainage nodes</span><div class="value">186</div><span class="badge low">Healthy 171</span></div><div class="stat"><span class="muted">Active alerts</span><div class="value">7</div><span class="badge high">3 high</span></div><div class="stat"><span class="muted">Sensors offline</span><div class="value">3</div><span class="badge moderate">Review</span></div></div>
-<div class="card"><h3>Infrastructure controls</h3><table class="table"><tr><th>Asset</th><th>Type</th><th>Status</th><th>Action</th></tr><tr><td>RS-09</td><td>Rain gauge</td><td><span class="badge low">Online</span></td><td><button class="btn secondary">Inspect</button></td></tr><tr><td>D-14</td><td>Drain node</td><td><span class="badge critical">Critical</span></td><td><button class="btn secondary">Dispatch</button></td></tr><tr><td>P-03</td><td>Pump station</td><td><span class="badge low">Running</span></td><td><button class="btn secondary">Inspect</button></td></tr></table></div>
-<div class="two" style="margin-top:20px"><div class="card"><h3>Data ingestion</h3><p class="muted">Radar API, IoT sensors and drainage model connectors.</p><button class="btn" data-refresh>Refresh data</button></div><div class="card"><h3>Reports</h3><p class="muted">Generate historical flood and infrastructure utilization reports.</p><button class="btn secondary">Export CSV</button> <button class="btn secondary">Export PDF</button></div></div></main>
-<footer class="footer"><div class="container"><strong>FloodNow AI — Urban Flood Nowcasting System</strong><p>Drainage + Rainfall Coupling • SIH26085</p><p>Prototype / Demo Mode • Built for Smart India Hackathon</p></div></footer><script src="script.js"></script></body></html>
+		<div class="page-head">
+			<div class="container">
+				<h1>Municipal Authority Dashboard</h1>
+				<p>Operational controls for flood monitoring and response.</p>
+			</div>
+		</div>
+		<main class="container section">
+			<div class="stats">
+				<div class="stat">
+					<span class="muted">Rainfall stations</span>
+					<div class="value">24</div>
+					<span class="badge low">Online 23</span>
+				</div>
+				<div class="stat">
+					<span class="muted">Drainage nodes</span>
+					<div class="value">186</div>
+					<span class="badge low">Healthy 171</span>
+				</div>
+				<div class="stat">
+					<span class="muted">Active alerts</span>
+					<div class="value">7</div>
+					<span class="badge high">3 high</span>
+				</div>
+				<div class="stat">
+					<span class="muted">Sensors offline</span>
+					<div class="value">3</div>
+					<span class="badge moderate">Review</span>
+				</div>
+			</div>
+			<div class="card">
+				<h3>Infrastructure controls</h3>
+				<table class="table">
+					<tr>
+						<th>Asset</th>
+						<th>Type</th>
+						<th>Status</th>
+						<th>Action</th>
+					</tr>
+					<tr>
+						<td>RS-09</td>
+						<td>Rain gauge</td>
+						<td><span class="badge low">Online</span></td>
+						<td><button class="btn secondary">Inspect</button></td>
+					</tr>
+					<tr>
+						<td>D-14</td>
+						<td>Drain node</td>
+						<td><span class="badge critical">Critical</span></td>
+						<td><button class="btn secondary">Dispatch</button></td>
+					</tr>
+					<tr>
+						<td>P-03</td>
+						<td>Pump station</td>
+						<td><span class="badge low">Running</span></td>
+						<td><button class="btn secondary">Inspect</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="two" style="margin-top: 20px">
+				<div class="card">
+					<h3>Data ingestion</h3>
+					<p class="muted">
+						Radar API, IoT sensors and drainage model connectors.
+					</p>
+					<button class="btn" data-refresh>Refresh data</button>
+				</div>
+				<div class="card">
+					<h3>Reports</h3>
+					<p class="muted">
+						Generate historical flood and infrastructure utilization
+						reports.
+					</p>
+					<button class="btn secondary">Export CSV</button>
+					<button class="btn secondary">Export PDF</button>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<strong>FloodNow AI — Urban Flood Nowcasting System</strong>
+				<p>Drainage + Rainfall Coupling • SIH26085</p>
+				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,15 +1,118 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flood Map | FloodNow AI</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="topbar"><span>Smart India Hackathon • SIH26085</span><span data-clock></span></div>
-<nav class="navbar"><a class="brand" href="index.html"><span class="brand-mark">🌧</span><span>FloodNow AI</span></a>
-<div class="navlinks">
-<a class="" href="dashboard.html">Dashboard</a>
-<a class="active" href="map.html">Flood Map</a>
-<a class="" href="analytics.html">Analytics</a>
-<a class="" href="alerts.html">Alerts</a>
-<a class="" href="admin.html">Admin</a>
-<a class="btn" href="emergency.html">Emergency</a></div></nav>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Flood Map | FloodNow AI</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="topbar">
+			<span>Smart India Hackathon • SIH26085</span
+			><span data-clock></span>
+		</div>
+		<nav class="navbar">
+			<a class="brand" href="index.html"
+				><span class="brand-mark">🌧</span><span>FloodNow AI</span></a
+			><button
+				class="menu-button"
+				data-menu
+				aria-label="Open navigation"
+				aria-expanded="false"
+			>
+				☰
+			</button>
+			<div class="navlinks">
+				<a class="" href="dashboard.html">Dashboard</a>
+				<a class="active" href="map.html">Flood Map</a>
+				<a class="" href="analytics.html">Analytics</a>
+				<a class="" href="alerts.html">Alerts</a
+				><a class="" href="history.html">History</a>
+				<a class="" href="admin.html">Admin</a>
+				<a class="btn" href="emergency.html">Emergency</a>
+			</div>
+		</nav>
 
-<div class="page-head"><div class="container"><h1>Interactive Flood-Risk Map</h1><p>Rainfall zones, drainage nodes and predicted waterlogging hotspots.</p></div></div>
-<main class="container section"><div class="two"><div class="card"><input class="search" placeholder="🔎 Search ward, road or drainage node..."><div class="mapbox" style="margin-top:15px"><span class="map-label l1">Ward 1 • LOW</span><span class="map-label l2">Ward 4 • HIGH</span><span class="map-label l3">Ward 7 • MODERATE</span><span class="map-label l4">D-14 • CRITICAL</span></div></div>
-<div><div class="card"><h3>Map legend</h3><p><span class="badge low">GREEN</span> Low risk</p><p><span class="badge moderate">YELLOW</span> Moderate risk</p><p><span class="badge high">ORANGE</span> High risk</p><p><span class="badge critical">RED</span> Critical risk</p></div><div class="card" style="margin-top:20px"><h3>Selected: Node D-14</h3><p class="muted">Central Market drainage node</p><table class="table"><tr><td>Rainfall</td><td><strong>86 mm/hr</strong></td></tr><tr><td>Capacity</td><td><strong>55 mm/hr</strong></td></tr><tr><td>Water level</td><td><strong>94%</strong></td></tr><tr><td>Forecast</td><td><span class="badge critical">Critical</span></td></tr></table></div></div></div></main>
-<footer class="footer"><div class="container"><strong>FloodNow AI — Urban Flood Nowcasting System</strong><p>Drainage + Rainfall Coupling • SIH26085</p><p>Prototype / Demo Mode • Built for Smart India Hackathon</p></div></footer><script src="script.js"></script></body></html>
+		<div class="page-head">
+			<div class="container">
+				<h1>Interactive Flood-Risk Map</h1>
+				<p>
+					Rainfall zones, drainage nodes and predicted waterlogging
+					hotspots.
+				</p>
+			</div>
+		</div>
+		<main class="container section">
+			<div class="two">
+				<div class="card">
+					<label class="sr-only" for="map-search"
+						>Search map locations</label
+					><input
+						id="map-search"
+						class="search"
+						data-map-search
+						placeholder="Search ward, road or drainage node..."
+					/>
+					<div class="mapbox" style="margin-top: 15px">
+						<span class="map-label l1" data-map-label
+							>Ward 1 • LOW</span
+						><span class="map-label l2" data-map-label
+							>Ward 4 • HIGH</span
+						><span class="map-label l3" data-map-label
+							>Ward 7 • MODERATE</span
+						><span class="map-label l4" data-map-label
+							>D-14 • CRITICAL</span
+						>
+					</div>
+				</div>
+				<div>
+					<div class="card">
+						<h3>Map legend</h3>
+						<p><span class="badge low">GREEN</span> Low risk</p>
+						<p>
+							<span class="badge moderate">YELLOW</span> Moderate
+							risk
+						</p>
+						<p><span class="badge high">ORANGE</span> High risk</p>
+						<p>
+							<span class="badge critical">RED</span> Critical
+							risk
+						</p>
+					</div>
+					<div class="card" style="margin-top: 20px">
+						<h3>Selected: Node D-14</h3>
+						<p class="muted">Central Market drainage node</p>
+						<table class="table">
+							<tr>
+								<td>Rainfall</td>
+								<td><strong>86 mm/hr</strong></td>
+							</tr>
+							<tr>
+								<td>Capacity</td>
+								<td><strong>55 mm/hr</strong></td>
+							</tr>
+							<tr>
+								<td>Water level</td>
+								<td><strong>94%</strong></td>
+							</tr>
+							<tr>
+								<td>Forecast</td>
+								<td>
+									<span class="badge critical">Critical</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<strong>FloodNow AI — Urban Flood Nowcasting System</strong>
+				<p>Drainage + Rainfall Coupling • SIH26085</p>
+				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

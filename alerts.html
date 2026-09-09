@@ -1,17 +1,98 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Alerts | FloodNow AI</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="topbar"><span>Smart India Hackathon • SIH26085</span><span data-clock></span></div>
-<nav class="navbar"><a class="brand" href="index.html"><span class="brand-mark">🌧</span><span>FloodNow AI</span></a>
-<div class="navlinks">
-<a class="" href="dashboard.html">Dashboard</a>
-<a class="" href="map.html">Flood Map</a>
-<a class="" href="analytics.html">Analytics</a>
-<a class="active" href="alerts.html">Alerts</a>
-<a class="" href="admin.html">Admin</a>
-<a class="btn" href="emergency.html">Emergency</a></div></nav>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Alerts | FloodNow AI</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="topbar">
+			<span>Smart India Hackathon • SIH26085</span
+			><span data-clock></span>
+		</div>
+		<nav class="navbar">
+			<a class="brand" href="index.html"
+				><span class="brand-mark">🌧</span><span>FloodNow AI</span></a
+			><button
+				class="menu-button"
+				data-menu
+				aria-label="Open navigation"
+				aria-expanded="false"
+			>
+				☰
+			</button>
+			<div class="navlinks">
+				<a class="" href="dashboard.html">Dashboard</a>
+				<a class="" href="map.html">Flood Map</a>
+				<a class="" href="analytics.html">Analytics</a>
+				<a class="active" href="alerts.html">Alerts</a
+				><a class="" href="history.html">History</a>
+				<a class="" href="admin.html">Admin</a>
+				<a class="btn" href="emergency.html">Emergency</a>
+			</div>
+		</nav>
 
-<div class="page-head"><div class="container"><h1>Flood Alerts & Notifications</h1><p>Prioritized alerts generated from rainfall and drainage conditions.</p></div></div>
-<main class="container section"><div class="alert critical"><strong>🚨 CRITICAL — Central Market</strong><p>Drainage node D-14 is at 94% water level. Flooding probability is high within the next 30 minutes.</p><button class="btn secondary">Acknowledge</button></div>
-<div class="alert"><strong>⚠ HIGH — Bus Stand</strong><p>Rainfall intensity is exceeding local drainage capacity. Prepare response teams.</p><button class="btn secondary">Acknowledge</button></div>
-<div class="alert" style="border-left-color:var(--yellow)"><strong>ℹ MODERATE — North Ward</strong><p>Water level is rising. Continue monitoring.</p><button class="btn secondary">Acknowledge</button></div>
-<div class="card"><h3>Risk response policy</h3><div class="grid4"><div><span class="badge low">LOW</span><p class="muted">Normal monitoring</p></div><div><span class="badge moderate">MODERATE</span><p class="muted">Increase monitoring</p></div><div><span class="badge high">HIGH</span><p class="muted">Prepare response teams</p></div><div><span class="badge critical">CRITICAL</span><p class="muted">Initiate emergency response</p></div></div></div></main>
-<footer class="footer"><div class="container"><strong>FloodNow AI — Urban Flood Nowcasting System</strong><p>Drainage + Rainfall Coupling • SIH26085</p><p>Prototype / Demo Mode • Built for Smart India Hackathon</p></div></footer><script src="script.js"></script></body></html>
+		<div class="page-head">
+			<div class="container">
+				<h1>Flood Alerts & Notifications</h1>
+				<p>
+					Prioritized alerts generated from rainfall and drainage
+					conditions.
+				</p>
+			</div>
+		</div>
+		<main class="container section">
+			<div class="alert critical">
+				<strong>🚨 CRITICAL — Central Market</strong>
+				<p>
+					Drainage node D-14 is at 94% water level. Flooding
+					probability is high within the next 30 minutes.
+				</p>
+				<button class="btn secondary">Acknowledge</button>
+			</div>
+			<div class="alert">
+				<strong>⚠ HIGH — Bus Stand</strong>
+				<p>
+					Rainfall intensity is exceeding local drainage capacity.
+					Prepare response teams.
+				</p>
+				<button class="btn secondary">Acknowledge</button>
+			</div>
+			<div class="alert" style="border-left-color: var(--yellow)">
+				<strong>ℹ MODERATE — North Ward</strong>
+				<p>Water level is rising. Continue monitoring.</p>
+				<button class="btn secondary">Acknowledge</button>
+			</div>
+			<div class="card">
+				<h3>Risk response policy</h3>
+				<div class="grid4">
+					<div>
+						<span class="badge low">LOW</span>
+						<p class="muted">Normal monitoring</p>
+					</div>
+					<div>
+						<span class="badge moderate">MODERATE</span>
+						<p class="muted">Increase monitoring</p>
+					</div>
+					<div>
+						<span class="badge high">HIGH</span>
+						<p class="muted">Prepare response teams</p>
+					</div>
+					<div>
+						<span class="badge critical">CRITICAL</span>
+						<p class="muted">Initiate emergency response</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<strong>FloodNow AI — Urban Flood Nowcasting System</strong>
+				<p>Drainage + Rainfall Coupling • SIH26085</p>
+				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,15 +1,105 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Historical Analysis | FloodNow AI</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="topbar"><span>Smart India Hackathon • SIH26085</span><span data-clock></span></div>
-<nav class="navbar"><a class="brand" href="index.html"><span class="brand-mark">🌧</span><span>FloodNow AI</span></a>
-<div class="navlinks">
-<a class="" href="dashboard.html">Dashboard</a>
-<a class="" href="map.html">Flood Map</a>
-<a class="" href="analytics.html">Analytics</a>
-<a class="" href="alerts.html">Alerts</a>
-<a class="" href="admin.html">Admin</a>
-<a class="btn" href="emergency.html">Emergency</a></div></nav>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Historical Analysis | FloodNow AI</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="topbar">
+			<span>Smart India Hackathon • SIH26085</span
+			><span data-clock></span>
+		</div>
+		<nav class="navbar">
+			<a class="brand" href="index.html"
+				><span class="brand-mark">🌧</span><span>FloodNow AI</span></a
+			><button
+				class="menu-button"
+				data-menu
+				aria-label="Open navigation"
+				aria-expanded="false"
+			>
+				☰
+			</button>
+			<div class="navlinks">
+				<a class="" href="dashboard.html">Dashboard</a>
+				<a class="" href="map.html">Flood Map</a>
+				<a class="" href="analytics.html">Analytics</a>
+				<a class="" href="alerts.html">Alerts</a
+				><a class="active" href="history.html">History</a>
+				<a class="" href="admin.html">Admin</a>
+				<a class="btn" href="emergency.html">Emergency</a>
+			</div>
+		</nav>
 
-<div class="page-head"><div class="container"><h1>Historical Flood Events</h1><p>Compare rainfall, drainage utilization and recorded flood incidents.</p></div></div>
-<main class="container section"><div class="card"><h3>Event history</h3><table class="table"><tr><th>Date</th><th>Zone</th><th>Peak rainfall</th><th>Peak water level</th><th>Severity</th></tr><tr><td>18 Aug 2026</td><td>Zone 4</td><td>94 mm/hr</td><td>96%</td><td><span class="badge critical">Critical</span></td></tr><tr><td>04 Aug 2026</td><td>Zone 7</td><td>76 mm/hr</td><td>84%</td><td><span class="badge high">High</span></td></tr><tr><td>22 Jul 2026</td><td>Zone 2</td><td>51 mm/hr</td><td>62%</td><td><span class="badge moderate">Moderate</span></td></tr></table></div>
-<div class="two" style="margin-top:20px"><div class="card"><h3>Lessons learned</h3><p class="muted">The strongest events occurred when rainfall intensity exceeded local drainage capacity for sustained periods.</p></div><div class="card"><h3>Future model improvement</h3><p class="muted">Incorporate soil saturation, tide/backwater effects, pump availability and real-time blockage detection.</p></div></div></main>
-<footer class="footer"><div class="container"><strong>FloodNow AI — Urban Flood Nowcasting System</strong><p>Drainage + Rainfall Coupling • SIH26085</p><p>Prototype / Demo Mode • Built for Smart India Hackathon</p></div></footer><script src="script.js"></script></body></html>
+		<div class="page-head">
+			<div class="container">
+				<h1>Historical Flood Events</h1>
+				<p>
+					Compare rainfall, drainage utilization and recorded flood
+					incidents.
+				</p>
+			</div>
+		</div>
+		<main class="container section">
+			<div class="card">
+				<h3>Event history</h3>
+				<table class="table">
+					<tr>
+						<th>Date</th>
+						<th>Zone</th>
+						<th>Peak rainfall</th>
+						<th>Peak water level</th>
+						<th>Severity</th>
+					</tr>
+					<tr>
+						<td>18 Aug 2026</td>
+						<td>Zone 4</td>
+						<td>94 mm/hr</td>
+						<td>96%</td>
+						<td><span class="badge critical">Critical</span></td>
+					</tr>
+					<tr>
+						<td>04 Aug 2026</td>
+						<td>Zone 7</td>
+						<td>76 mm/hr</td>
+						<td>84%</td>
+						<td><span class="badge high">High</span></td>
+					</tr>
+					<tr>
+						<td>22 Jul 2026</td>
+						<td>Zone 2</td>
+						<td>51 mm/hr</td>
+						<td>62%</td>
+						<td><span class="badge moderate">Moderate</span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="two" style="margin-top: 20px">
+				<div class="card">
+					<h3>Lessons learned</h3>
+					<p class="muted">
+						The strongest events occurred when rainfall intensity
+						exceeded local drainage capacity for sustained periods.
+					</p>
+				</div>
+				<div class="card">
+					<h3>Future model improvement</h3>
+					<p class="muted">
+						Incorporate soil saturation, tide/backwater effects,
+						pump availability and real-time blockage detection.
+					</p>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<strong>FloodNow AI — Urban Flood Nowcasting System</strong>
+				<p>Drainage + Rainfall Coupling • SIH26085</p>
+				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

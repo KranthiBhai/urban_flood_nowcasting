@@ -1,21 +1,169 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Live Dashboard | FloodNow AI</title><link rel="stylesheet" href="styles.css"></head><body>
-<div class="topbar"><span>Smart India Hackathon • SIH26085</span><span data-clock></span></div>
-<nav class="navbar"><a class="brand" href="index.html"><span class="brand-mark">🌧</span><span>FloodNow AI</span></a>
-<div class="navlinks">
-<a class="active" href="dashboard.html">Dashboard</a>
-<a class="" href="map.html">Flood Map</a>
-<a class="" href="analytics.html">Analytics</a>
-<a class="" href="alerts.html">Alerts</a>
-<a class="" href="admin.html">Admin</a>
-<a class="btn" href="emergency.html">Emergency</a></div></nav>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Live Dashboard | FloodNow AI</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="topbar">
+			<span>Smart India Hackathon • SIH26085</span
+			><span data-clock></span>
+		</div>
+		<nav class="navbar">
+			<a class="brand" href="index.html"
+				><span class="brand-mark">🌧</span><span>FloodNow AI</span></a
+			><button
+				class="menu-button"
+				data-menu
+				aria-label="Open navigation"
+				aria-expanded="false"
+			>
+				☰
+			</button>
+			<div class="navlinks">
+				<a class="active" href="dashboard.html">Dashboard</a>
+				<a class="" href="map.html">Flood Map</a>
+				<a class="" href="analytics.html">Analytics</a>
+				<a class="" href="alerts.html">Alerts</a
+				><a class="" href="history.html">History</a>
+				<a class="" href="admin.html">Admin</a>
+				<a class="btn" href="emergency.html">Emergency</a>
+			</div>
+		</nav>
 
-<div class="page-head"><div class="container"><h1>Live Flood Monitoring Dashboard</h1><p>City-wide rainfall, drainage and short-horizon flood risk.</p></div></div>
-<main class="container section">
-<div class="notice">🟢 System operational • <strong>DEMO / SIMULATION MODE</strong> • Data refreshes automatically.</div>
-<div class="stats"><div class="stat"><span class="muted">Rainfall intensity</span><div class="value">72 mm/hr</div><span class="badge high">HIGH</span></div><div class="stat"><span class="muted">Drainage capacity</span><div class="value">55 mm/hr</div><span class="badge critical">92% used</span></div><div class="stat"><span class="muted">Water level</span><div class="value">78%</div><span class="badge moderate">Rising</span></div><div class="stat"><span class="muted">Predicted risk</span><div class="value" data-risk>HIGH</div><span class="badge high">Next 30 min</span></div></div>
-<div class="layout"><div class="card"><h3>City Flood-Risk Map</h3><div class="mapbox"><span class="map-label l1">Zone 1 • LOW</span><span class="map-label l2">Zone 4 • HIGH</span><span class="map-label l3">Zone 7 • MODERATE</span><span class="map-label l4">Node D-14 • CRITICAL</span></div></div>
-<div><div class="card"><h3>Critical alerts</h3><div class="alert critical"><strong>Zone 4</strong><br>Flooding possible within 30 minutes.</div><div class="alert"><strong>Node D-14</strong><br>Operating above 90% capacity.</div><a class="btn" href="alerts.html">View all alerts</a></div>
-<div class="card" style="margin-top:20px"><h3>Nowcast timeline</h3><div class="timeline"><div class="timebox">Now<strong>HIGH</strong><span class="muted">72 mm/hr</span></div><div class="timebox">+15m<strong>HIGH</strong><span class="muted">80 mm/hr</span></div><div class="timebox">+30m<strong>CRITICAL</strong><span class="muted">86 mm/hr</span></div><div class="timebox">+60m<strong>HIGH</strong><span class="muted">61 mm/hr</span></div></div></div></div></div>
-<div class="card" style="margin-top:20px"><h3>Drainage network status</h3><table class="table"><tr><th>Node</th><th>Location</th><th>Capacity use</th><th>Status</th></tr><tr><td>D-14</td><td>Central Market</td><td><div class="bar"><span style="width:92%"></span></div></td><td><span class="badge critical">Critical</span></td></tr><tr><td>D-07</td><td>Bus Stand</td><td><div class="bar"><span style="width:81%"></span></div></td><td><span class="badge high">High</span></td></tr><tr><td>D-02</td><td>North Ward</td><td><div class="bar"><span style="width:48%"></span></div></td><td><span class="badge low">Normal</span></td></tr></table></div>
-</main>
-<footer class="footer"><div class="container"><strong>FloodNow AI — Urban Flood Nowcasting System</strong><p>Drainage + Rainfall Coupling • SIH26085</p><p>Prototype / Demo Mode • Built for Smart India Hackathon</p></div></footer><script src="script.js"></script></body></html>
+		<div class="page-head">
+			<div class="container">
+				<h1>Live Flood Monitoring Dashboard</h1>
+				<p>
+					City-wide rainfall, drainage and short-horizon flood risk.
+				</p>
+			</div>
+		</div>
+		<main class="container section">
+			<div class="notice">
+				🟢 System operational •
+				<strong>DEMO / SIMULATION MODE</strong> • Values are
+				synchronized sample data.
+			</div>
+			<div class="stats">
+				<div class="stat">
+					<span class="muted">Rainfall intensity</span>
+					<div class="value">72 mm/hr</div>
+					<span class="badge high">HIGH</span>
+				</div>
+				<div class="stat">
+					<span class="muted">Drainage capacity</span>
+					<div class="value">55 mm/hr</div>
+					<span class="badge critical">92% used</span>
+				</div>
+				<div class="stat">
+					<span class="muted">Water level</span>
+					<div class="value">78%</div>
+					<span class="badge moderate">Rising</span>
+				</div>
+				<div class="stat">
+					<span class="muted">Predicted risk</span>
+					<div class="value" data-risk>HIGH</div>
+					<span class="badge high">Next 30 min</span>
+				</div>
+			</div>
+			<div class="layout">
+				<div class="card">
+					<h3>City Flood-Risk Map</h3>
+					<div class="mapbox">
+						<span class="map-label l1">Zone 1 • LOW</span
+						><span class="map-label l2">Zone 4 • HIGH</span
+						><span class="map-label l3">Zone 7 • MODERATE</span
+						><span class="map-label l4">Node D-14 • CRITICAL</span>
+					</div>
+				</div>
+				<div>
+					<div class="card">
+						<h3>Critical alerts</h3>
+						<div class="alert critical">
+							<strong>Zone 4</strong><br />Flooding possible
+							within 30 minutes.
+						</div>
+						<div class="alert">
+							<strong>Node D-14</strong><br />Operating above 90%
+							capacity.
+						</div>
+						<a class="btn" href="alerts.html">View all alerts</a>
+					</div>
+					<div class="card" style="margin-top: 20px">
+						<h3>Nowcast timeline</h3>
+						<div class="timeline">
+							<div class="timebox">
+								Now<strong>HIGH</strong
+								><span class="muted">72 mm/hr</span>
+							</div>
+							<div class="timebox">
+								+15m<strong>HIGH</strong
+								><span class="muted">80 mm/hr</span>
+							</div>
+							<div class="timebox">
+								+30m<strong>CRITICAL</strong
+								><span class="muted">86 mm/hr</span>
+							</div>
+							<div class="timebox">
+								+60m<strong>HIGH</strong
+								><span class="muted">61 mm/hr</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card" style="margin-top: 20px">
+				<h3>Drainage network status</h3>
+				<table class="table">
+					<tr>
+						<th>Node</th>
+						<th>Location</th>
+						<th>Capacity use</th>
+						<th>Status</th>
+					</tr>
+					<tr>
+						<td>D-14</td>
+						<td>Central Market</td>
+						<td>
+							<div class="bar">
+								<span style="width: 92%"></span>
+							</div>
+						</td>
+						<td><span class="badge critical">Critical</span></td>
+					</tr>
+					<tr>
+						<td>D-07</td>
+						<td>Bus Stand</td>
+						<td>
+							<div class="bar">
+								<span style="width: 81%"></span>
+							</div>
+						</td>
+						<td><span class="badge high">High</span></td>
+					</tr>
+					<tr>
+						<td>D-02</td>
+						<td>North Ward</td>
+						<td>
+							<div class="bar">
+								<span style="width: 48%"></span>
+							</div>
+						</td>
+						<td><span class="badge low">Normal</span></td>
+					</tr>
+				</table>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<strong>FloodNow AI — Urban Flood Nowcasting System</strong>
+				<p>Drainage + Rainfall Coupling • SIH26085</p>
+				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>
