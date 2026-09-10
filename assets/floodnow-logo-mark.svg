@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">FloodNow AI logo</title>
+  <desc id="desc">White rain cloud on a blue rounded square.</desc>
+  <defs>
+    <linearGradient id="logo-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1767a4"/>
+      <stop offset="1" stop-color="#1ea7d7"/>
+    </linearGradient>
+  </defs>
+  <rect width="96" height="96" rx="25" fill="url(#logo-blue)"/>
+  <path d="M25 53c0-7 5-13 12-14 3-9 11-15 21-15 10 0 18 6 21 15 7 1 12 7 12 14 0 8-6 14-14 14H39c-8 0-14-6-14-14Z" fill="#fff"/>
+  <path d="M43 72l-4 7M57 72l-4 7M71 72l-4 7" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+</svg>
