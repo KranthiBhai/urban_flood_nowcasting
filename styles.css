@@ -248,6 +248,39 @@ a {
 	background: #d8ecf7 url('assets/city-map.svg') center/cover no-repeat;
 	position: relative;
 }
+.city-map {
+	display: block;
+	width: 100%;
+	height: 430px;
+	border: 0;
+}
+.leaflet-container {
+	font: inherit;
+}
+.risk-marker {
+	background: transparent;
+	border: 0;
+}
+.risk-marker .map-label {
+	position: relative;
+	display: inline-block;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: auto;
+}
+.map-link {
+	display: inline-block;
+	margin-top: 12px;
+	color: var(--blue);
+	font-size: 14px;
+	font-weight: 700;
+}
+.map-labels {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
 .map-label {
 	position: absolute;
 	background: #fff;
@@ -256,6 +289,51 @@ a {
 	box-shadow: var(--shadow);
 	font-size: 12px;
 	font-weight: 800;
+	white-space: nowrap;
+}
+.map-label::before {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 6px;
+	border-radius: 50%;
+}
+.risk-low::before,
+.low-dot {
+	background: var(--green);
+}
+.risk-moderate::before,
+.moderate-dot {
+	background: var(--yellow);
+}
+.risk-high::before,
+.high-dot {
+	background: var(--orange);
+}
+.risk-critical::before,
+.critical-dot {
+	background: var(--red);
+}
+.map-risk-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 18px;
+	margin-top: 14px;
+	color: var(--muted);
+	font-size: 13px;
+	font-weight: 700;
+}
+.map-risk-legend span {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+.risk-dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
 }
 .l1 {
 	top: 22%;

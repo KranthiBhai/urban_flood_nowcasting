@@ -5,6 +5,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<title>Flood Map | FloodNow AI</title>
 		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
 	</head>
 	<body>
 		<div class="topbar">
@@ -57,15 +63,11 @@
 						placeholder="Search ward, road or drainage node..."
 					/>
 					<div class="mapbox" style="margin-top: 15px">
-						<span class="map-label l1" data-map-label
-							>Ward 1 • LOW</span
-						><span class="map-label l2" data-map-label
-							>Ward 4 • HIGH</span
-						><span class="map-label l3" data-map-label
-							>Ward 7 • MODERATE</span
-						><span class="map-label l4" data-map-label
-							>D-14 • CRITICAL</span
-						>
+						<div
+							class="city-map"
+							data-city-map
+							aria-label="Interactive Nellore city flood-risk map"
+						></div>
 					</div>
 				</div>
 				<div>
@@ -116,6 +118,11 @@
 				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
 			</div>
 		</footer>
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""
+		></script>
 		<script src="script.js"></script>
 	</body>
 </html>

@@ -22,12 +22,41 @@ document.addEventListener("DOMContentLoaded", () => {
       menuButton.setAttribute("aria-expanded", String(open));
     })
   }
+  const riskAreas = [
+    { name: "Dargamitta", risk: "low", coordinates: [14.444, 79.966] },
+    { name: "Balaji Nagar", risk: "moderate", coordinates: [14.456, 79.979] },
+    { name: "Ramji Nagar", risk: "high", coordinates: [14.432, 79.982] },
+    { name: "Vedayapalem", risk: "critical", coordinates: [14.425, 79.975] }
+  ];
+  const cityMaps = document.querySelectorAll("[data-city-map]");
+  if (window.L && cityMaps.length) {
+    cityMaps.forEach(container => {
+      const map = L.map(container).setView([14.4425987, 79.986456], 13);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      const markers = riskAreas.map(area => {
+        const marker = L.marker(area.coordinates, {
+          icon: L.divIcon({
+            className: "risk-marker",
+            html: `<span class="map-label risk-${area.risk}" data-map-label>${area.name} &bull; ${area.risk.toUpperCase()}</span>`,
+            iconSize: null
+          })
+        }).addTo(map);
+        return { marker, area };
+      });
+      container._riskMarkers = markers;
+    });
+  }
   const search = document.querySelector("[data-map-search]");
   if (search) {
     search.addEventListener("input", () => {
       const query = search.value.toLowerCase().trim();
-      document.querySelectorAll("[data-map-label]").forEach(label => {
-        label.hidden = query !== "" && !label.textContent.toLowerCase().includes(query);
+      cityMaps.forEach(container => {
+        (container._riskMarkers || []).forEach(({ marker, area }) => {
+          const visible = query === "" || `${area.name} ${area.risk}`.toLowerCase().includes(query);
+          marker.setOpacity(visible ? 1 : 0);
+        });
       });
     })
   }
