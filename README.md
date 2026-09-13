@@ -1,10 +1,21 @@
 # FloodNow AI — SIH26085
+
 Urban Flood Nowcasting System (Drainage and Rainfall Coupling)
 
 ## Run
-This is a pure static HTML/CSS/JS prototype. Open `index.html` directly in a browser, or use VS Code Live Server.
+
+The website is a static HTML/CSS/JS frontend backed by the TypeScript API in `backend/`.
+
+### Backend
+
+See `backend/README.md`. In short: configure PostgreSQL, copy `backend/.env.example` to `backend/.env`, run `npm install`, `npx prisma migrate dev --name init`, `npm run prisma:seed`, then `npm run dev`.
+
+### Frontend
+
+Serve this directory with VS Code Live Server on port 5500. The shared `script.js` calls `http://localhost:3000/api` and keeps the existing static demo values as a fallback when the API is unavailable.
 
 ## Pages
+
 - index.html — Landing page
 - dashboard.html — Live monitoring dashboard
 - map.html — Flood-risk map
@@ -14,5 +25,6 @@ This is a pure static HTML/CSS/JS prototype. Open `index.html` directly in a bro
 - history.html — Historical analysis
 - emergency.html — Emergency response
 
-## Next step
-Connect the demo values to real rainfall radar/weather APIs, IoT water-level sensors, GIS drainage data and a backend ML model.
+## Architecture
+
+Existing HTML frontend -> REST API -> Express/TypeScript -> Prisma/PostgreSQL. Current demo data is seeded for four Nellore locations and alert severity is derived from per-location water-level thresholds. A future radar, weather, IoT, GIS, or ML provider can feed `POST /api/measurements` server-side.
