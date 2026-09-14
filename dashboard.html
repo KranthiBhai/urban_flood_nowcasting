@@ -53,8 +53,8 @@
 		<main class="container section">
 			<div class="notice">
 				🟢 System operational •
-				<strong>DEMO / SIMULATION MODE</strong> • Values are
-				synchronized sample data.
+				<strong>LIVE MONITORING</strong> • Values are synced from the
+				FloodNow backend.
 			</div>
 			<div class="stats">
 				<div class="stat">
@@ -107,7 +107,36 @@
 					>
 				</div>
 				<div>
-					<div class="card">
+					<div class="card selection-card">
+						<h3>Selected location</h3>
+						<div class="selection-card-body">
+							<div class="selection-header">
+								<h4>Node D-14</h4>
+							</div>
+							<p class="selection-subtitle">
+								Central Market drainage node
+							</p>
+							<div class="selection-row">
+								<span>Rainfall</span>
+								<strong>86 mm/hr</strong>
+							</div>
+							<div class="selection-row">
+								<span>Capacity</span>
+								<strong>55 mm/hr</strong>
+							</div>
+							<div class="selection-row">
+								<span>Water level</span>
+								<strong>94%</strong>
+							</div>
+							<div class="selection-row selection-row-end">
+								<span>Forecast</span>
+								<strong class="forecast-pill critical"
+									>Critical</strong
+								>
+							</div>
+						</div>
+					</div>
+					<div class="card critical-alerts-card">
 						<h3>Critical alerts</h3>
 						<div class="alert critical">
 							<strong>Zone 4</strong><br />Flooding possible
@@ -188,7 +217,7 @@
 			<div class="container">
 				<strong>FloodNow AI — Urban Flood Nowcasting System</strong>
 				<p>Drainage + Rainfall Coupling • SIH26085</p>
-				<p>Prototype / Demo Mode • Built for Smart India Hackathon</p>
+				<p>Operational prototype • Built for Smart India Hackathon</p>
 			</div>
 		</footer>
 		<script

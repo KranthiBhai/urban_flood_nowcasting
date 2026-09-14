@@ -46,7 +46,7 @@ a {
 	box-shadow: 0 2px 12px #0000000d;
 	position: sticky;
 	top: 0;
-	z-index: 20;
+	z-index: 2000;
 }
 .brand {
 	display: flex;
@@ -257,6 +257,10 @@ a {
 .leaflet-container {
 	font: inherit;
 }
+.leaflet-top,
+.leaflet-bottom {
+	z-index: 400;
+}
 .risk-marker {
 	background: transparent;
 	border: 0;
@@ -275,6 +279,69 @@ a {
 	color: var(--blue);
 	font-size: 14px;
 	font-weight: 700;
+}
+.selection-card {
+	padding: 18px;
+}
+.selection-card-body {
+	padding-top: 4px;
+}
+.selection-header h4 {
+	margin: 0;
+	font-size: 27px;
+	letter-spacing: 0;
+	line-height: 1.15;
+	color: #1d2d44;
+}
+.selection-subtitle {
+	margin: 6px 0 12px;
+	font-size: 15px;
+	color: #5b6b80;
+}
+.selection-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 14px;
+	padding: 11px 0;
+	border-top: 1px solid #edf1f5;
+	font-size: 15px;
+	color: #2d3b52;
+}
+.selection-row strong {
+	font-size: 16px;
+	font-weight: 800;
+	color: #1d2d44;
+}
+.selection-row-end {
+	padding-bottom: 10px;
+}
+.forecast-pill {
+	display: inline-block;
+	min-width: 100px;
+	text-align: center;
+	padding: 7px 12px;
+	border-radius: 999px;
+	font-weight: 800;
+	font-size: 13px;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+.forecast-pill.low {
+	background: #dff8ea;
+	color: #107b59;
+}
+.forecast-pill.moderate {
+	background: #f6efc9;
+	color: #9f7300;
+}
+.forecast-pill.high {
+	background: #ffe3d2;
+	color: #b35114;
+}
+.forecast-pill.critical {
+	background: #ffd9d9;
+	color: #b62a2a;
 }
 .map-labels {
 	position: absolute;
@@ -504,6 +571,69 @@ a {
 	padding: 15px;
 	border-radius: 12px;
 	color: #20557d;
+}
+body.api-loading .stats,
+body.api-loading .layout,
+body.api-loading .two,
+body.api-loading .alerts-feed,
+body.api-loading .history-events-card,
+body.api-loading .admin-infrastructure-card {
+	position: relative;
+	overflow: hidden;
+	min-height: 180px;
+}
+body.api-loading .stats > *,
+body.api-loading .layout > *,
+body.api-loading .two > *,
+body.api-loading .alerts-feed > *,
+body.api-loading .history-events-card > *,
+body.api-loading .admin-infrastructure-card > * {
+	visibility: hidden;
+}
+body.api-loading .stats::after,
+body.api-loading .layout::after,
+body.api-loading .two::after,
+body.api-loading .alerts-feed::after,
+body.api-loading .history-events-card::after,
+body.api-loading .admin-infrastructure-card::after {
+	content: 'Loading live data';
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 28px;
+	background: rgba(244, 247, 251, 0.88);
+	color: var(--blue);
+	font-size: 15px;
+	font-weight: 700;
+	visibility: visible;
+	z-index: 2;
+}
+body.api-loading .stats::before,
+body.api-loading .layout::before,
+body.api-loading .two::before,
+body.api-loading .alerts-feed::before,
+body.api-loading .history-events-card::before,
+body.api-loading .admin-infrastructure-card::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 28px;
+	height: 28px;
+	margin: -24px 0 0 -14px;
+	border: 3px solid #d3e5f3;
+	border-top-color: var(--blue);
+	border-radius: 50%;
+	animation: data-loader-spin 0.8s linear infinite;
+	visibility: visible;
+	z-index: 3;
+}
+@keyframes data-loader-spin {
+	to {
+		transform: rotate(360deg);
+	}
 }
 .search {
 	padding: 11px 14px;
